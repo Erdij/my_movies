@@ -19,7 +19,7 @@ class MovieList extends React.Component {
                   Delete
                 </button>
                 <h2>
-                  <span className=" badge-info">9.0</span>
+                  <span className="badge badge-info">9.0</span>
                 </h2>
               </div>
             </div>

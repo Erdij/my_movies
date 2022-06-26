@@ -9,6 +9,15 @@ class App extends React.Component {
     searchQuery: "",
   };
 
+  async componentDidMount() {
+    const baseURL = "http://localhost:3000/movies";
+    const response = await fetch(baseURL);
+    console.log(response);
+    const data = await response.json(); //response json a çevrildi
+    console.log(data);
+    this.setState({ movies: data }); //güncel state e json formatına çevrilen responslar aktarıldı.
+  }
+
   deleteMovie = (movie) => {
     const newMovieList = this.state.movies.filter((m) => m.id !== movie.id);
 
